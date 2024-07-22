@@ -1,9 +1,12 @@
 import React from 'react'
 
-function Options() {
+function Options({option,nextQuest}) {
   return (
-    <div className='options'>
-      
+    <div className='options' onClick={()=>{
+      console.log(option);
+      nextQuest();
+    }}>
+      {option}
     </div>
   )
 }

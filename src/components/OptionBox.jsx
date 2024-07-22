@@ -1,14 +1,15 @@
 import React from 'react'
 import Option from './Options'
 
-function OptionBox() {
+function OptionBox({currentQuestion,nextQuest}) {
+  const displayOpt =(list)=>{
+    return currentQuestion.ansList.map((option,index)=>(
+      <Option key={index} option={option} nextQuest={nextQuest}/>
+    ))
+  }
   return (
     <div className='optionBox'>
-      <Option/>
-      <Option/>
-      <Option/>
-      <Option/>
-      <Option/>
+        {displayOpt(currentQuestion)}
     </div>
   )
 }
