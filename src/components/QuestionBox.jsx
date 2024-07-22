@@ -1,9 +1,9 @@
 import React from 'react'
 
-function QuestionBox() {
+function QuestionBox({currentQuestion}) {
   return (
     <div className='questionBox'>
-      Who will be king of the pirates?
+      {currentQuestion.question}
     </div>
   )
 }
